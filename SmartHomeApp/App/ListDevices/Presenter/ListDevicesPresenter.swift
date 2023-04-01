@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+public protocol ListDevicesPresenter {
+    func start()
+}
+
+public protocol ListDevicesPresenterDelegate: AnyObject {
+}

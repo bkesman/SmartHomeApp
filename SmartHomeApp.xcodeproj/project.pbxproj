@@ -22,6 +22,7 @@
 		6D0D489E29D8D17E00B19CC2 /* ListDevicesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0D489D29D8D17E00B19CC2 /* ListDevicesPresenter.swift */; };
 		6D0D48A029D8D20900B19CC2 /* ListDevicesViewContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0D489F29D8D20900B19CC2 /* ListDevicesViewContract.swift */; };
 		6D0D48A229D8D21A00B19CC2 /* ListDevicesPresenterImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0D48A129D8D21A00B19CC2 /* ListDevicesPresenterImplementation.swift */; };
+		6D0D48A929D8EBF700B19CC2 /* DependencyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0D48A829D8EBF700B19CC2 /* DependencyProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		6D0D489D29D8D17E00B19CC2 /* ListDevicesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDevicesPresenter.swift; sourceTree = "<group>"; };
 		6D0D489F29D8D20900B19CC2 /* ListDevicesViewContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDevicesViewContract.swift; sourceTree = "<group>"; };
 		6D0D48A129D8D21A00B19CC2 /* ListDevicesPresenterImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDevicesPresenterImplementation.swift; sourceTree = "<group>"; };
+		6D0D48A829D8EBF700B19CC2 /* DependencyProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 		6D0D488629D8CCB200B19CC2 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				6D0D48A729D8EBE000B19CC2 /* DI */,
 				6D0D488E29D8CEC500B19CC2 /* ListDevices */,
 				6D0D488929D8CCBF00B19CC2 /* Coordinator */,
 			);
@@ -182,6 +185,14 @@
 			path = LIstDevicesViewModel;
 			sourceTree = "<group>";
 		};
+		6D0D48A729D8EBE000B19CC2 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				6D0D48A829D8EBF700B19CC2 /* DependencyProvider.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -264,6 +275,7 @@
 				6D0D487329D8CBEF00B19CC2 /* AppDelegate.swift in Sources */,
 				6D0D48A029D8D20900B19CC2 /* ListDevicesViewContract.swift in Sources */,
 				6D0D489629D8D14500B19CC2 /* ListDevicesViewController.swift in Sources */,
+				6D0D48A929D8EBF700B19CC2 /* DependencyProvider.swift in Sources */,
 				6D0D487529D8CBEF00B19CC2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

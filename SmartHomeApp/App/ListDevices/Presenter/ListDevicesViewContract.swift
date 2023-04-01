@@ -6,3 +6,6 @@
 //
 
 import Foundation
+
+protocol ListDevicesViewContract: AnyObject {
+}

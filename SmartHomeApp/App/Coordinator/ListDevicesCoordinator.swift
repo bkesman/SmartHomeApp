@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class ListDevicesCoordinator {
+class ListDevicesCoordinator: ListDevicesPresenterDelegate {
     
     let rootViewController: UIViewController
     let navigationController = UINavigationController()
@@ -18,5 +18,16 @@ class ListDevicesCoordinator {
     }
     
     func start() {
+        let viewController = ListDevicesViewController()
+        viewController.presenter = DependencyProvider.shared.listDevicesPresenter(viewContract: viewController,
+                                                                                  delegate: self)
+        rootViewController.addChild(navigationController)
+        rootViewController.view.addSubview(navigationController.view)
+        navigationController.didMove(toParent: rootViewController)
+        navigationController.view.translatesAutoresizingMaskIntoConstraints = false
+        navigationController.view.bottomAnchor.constraint(equalTo: rootViewController.view.bottomAnchor).isActive = true
+        navigationController.view.widthAnchor.constraint(equalTo: rootViewController.view.widthAnchor).isActive = true
+        navigationController.view.heightAnchor.constraint(equalTo: rootViewController.view.heightAnchor).isActive = true
+        navigationController.pushViewController(viewController, animated: false)
     }
 }
