@@ -15,6 +15,13 @@
 		6D0D487F29D8CBF100B19CC2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D0D487D29D8CBF100B19CC2 /* LaunchScreen.storyboard */; };
 		6D0D488B29D8CCDF00B19CC2 /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0D488A29D8CCDF00B19CC2 /* RootCoordinator.swift */; };
 		6D0D488D29D8CD1500B19CC2 /* ListDevicesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0D488C29D8CD1500B19CC2 /* ListDevicesCoordinator.swift */; };
+		6D0D489629D8D14500B19CC2 /* ListDevicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0D489529D8D14500B19CC2 /* ListDevicesViewController.swift */; };
+		6D0D489829D8D15900B19CC2 /* ListDevicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0D489729D8D15900B19CC2 /* ListDevicesView.swift */; };
+		6D0D489A29D8D16200B19CC2 /* ListDevicesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0D489929D8D16200B19CC2 /* ListDevicesViewModel.swift */; };
+		6D0D489C29D8D16D00B19CC2 /* ListDevicesViewModelMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0D489B29D8D16D00B19CC2 /* ListDevicesViewModelMapper.swift */; };
+		6D0D489E29D8D17E00B19CC2 /* ListDevicesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0D489D29D8D17E00B19CC2 /* ListDevicesPresenter.swift */; };
+		6D0D48A029D8D20900B19CC2 /* ListDevicesViewContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0D489F29D8D20900B19CC2 /* ListDevicesViewContract.swift */; };
+		6D0D48A229D8D21A00B19CC2 /* ListDevicesPresenterImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0D48A129D8D21A00B19CC2 /* ListDevicesPresenterImplementation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +35,13 @@
 		6D0D488029D8CBF100B19CC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D0D488A29D8CCDF00B19CC2 /* RootCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinator.swift; sourceTree = "<group>"; };
 		6D0D488C29D8CD1500B19CC2 /* ListDevicesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDevicesCoordinator.swift; sourceTree = "<group>"; };
+		6D0D489529D8D14500B19CC2 /* ListDevicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDevicesViewController.swift; sourceTree = "<group>"; };
+		6D0D489729D8D15900B19CC2 /* ListDevicesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDevicesView.swift; sourceTree = "<group>"; };
+		6D0D489929D8D16200B19CC2 /* ListDevicesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDevicesViewModel.swift; sourceTree = "<group>"; };
+		6D0D489B29D8D16D00B19CC2 /* ListDevicesViewModelMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDevicesViewModelMapper.swift; sourceTree = "<group>"; };
+		6D0D489D29D8D17E00B19CC2 /* ListDevicesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDevicesPresenter.swift; sourceTree = "<group>"; };
+		6D0D489F29D8D20900B19CC2 /* ListDevicesViewContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDevicesViewContract.swift; sourceTree = "<group>"; };
+		6D0D48A129D8D21A00B19CC2 /* ListDevicesPresenterImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDevicesPresenterImplementation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +133,9 @@
 		6D0D488F29D8CECC00B19CC2 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				6D0D489D29D8D17E00B19CC2 /* ListDevicesPresenter.swift */,
+				6D0D489F29D8D20900B19CC2 /* ListDevicesViewContract.swift */,
+				6D0D48A129D8D21A00B19CC2 /* ListDevicesPresenterImplementation.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -127,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				6D0D489429D8CEF100B19CC2 /* LIstDevicesViewModel */,
+				6D0D489B29D8D16D00B19CC2 /* ListDevicesViewModelMapper.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -143,6 +161,7 @@
 		6D0D489229D8CEE200B19CC2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				6D0D489729D8D15900B19CC2 /* ListDevicesView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -150,6 +169,7 @@
 		6D0D489329D8CEEB00B19CC2 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				6D0D489529D8D14500B19CC2 /* ListDevicesViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -157,6 +177,7 @@
 		6D0D489429D8CEF100B19CC2 /* LIstDevicesViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				6D0D489929D8D16200B19CC2 /* ListDevicesViewModel.swift */,
 			);
 			path = LIstDevicesViewModel;
 			sourceTree = "<group>";
@@ -232,10 +253,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D0D48A229D8D21A00B19CC2 /* ListDevicesPresenterImplementation.swift in Sources */,
+				6D0D489E29D8D17E00B19CC2 /* ListDevicesPresenter.swift in Sources */,
+				6D0D489A29D8D16200B19CC2 /* ListDevicesViewModel.swift in Sources */,
+				6D0D489829D8D15900B19CC2 /* ListDevicesView.swift in Sources */,
 				6D0D488D29D8CD1500B19CC2 /* ListDevicesCoordinator.swift in Sources */,
 				6D0D488B29D8CCDF00B19CC2 /* RootCoordinator.swift in Sources */,
+				6D0D489C29D8D16D00B19CC2 /* ListDevicesViewModelMapper.swift in Sources */,
 				6D0D487729D8CBEF00B19CC2 /* ViewController.swift in Sources */,
 				6D0D487329D8CBEF00B19CC2 /* AppDelegate.swift in Sources */,
+				6D0D48A029D8D20900B19CC2 /* ListDevicesViewContract.swift in Sources */,
+				6D0D489629D8D14500B19CC2 /* ListDevicesViewController.swift in Sources */,
 				6D0D487529D8CBEF00B19CC2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
