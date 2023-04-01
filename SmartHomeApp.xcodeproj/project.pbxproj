@@ -77,6 +77,7 @@
 		6D0D488629D8CCB200B19CC2 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				6D0D488E29D8CEC500B19CC2 /* ListDevices */,
 				6D0D488929D8CCBF00B19CC2 /* Coordinator */,
 			);
 			path = App;
@@ -103,6 +104,61 @@
 				6D0D488C29D8CD1500B19CC2 /* ListDevicesCoordinator.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		6D0D488E29D8CEC500B19CC2 /* ListDevices */ = {
+			isa = PBXGroup;
+			children = (
+				6D0D489129D8CEDF00B19CC2 /* UI */,
+				6D0D489029D8CED300B19CC2 /* Model */,
+				6D0D488F29D8CECC00B19CC2 /* Presenter */,
+			);
+			path = ListDevices;
+			sourceTree = "<group>";
+		};
+		6D0D488F29D8CECC00B19CC2 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		6D0D489029D8CED300B19CC2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6D0D489429D8CEF100B19CC2 /* LIstDevicesViewModel */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6D0D489129D8CEDF00B19CC2 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				6D0D489329D8CEEB00B19CC2 /* ViewController */,
+				6D0D489229D8CEE200B19CC2 /* View */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		6D0D489229D8CEE200B19CC2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6D0D489329D8CEEB00B19CC2 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		6D0D489429D8CEF100B19CC2 /* LIstDevicesViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LIstDevicesViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
