@@ -9,5 +9,7 @@ import Foundation
 
 struct LightSteeringViewModel{
     let mode: Mode
+    let modeTitle: String
+    let intensityTitle: String
     let intensity: Int
 }
