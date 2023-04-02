@@ -14,4 +14,5 @@ extension UIImage {
     static let deviceLightOffIcon = UIImage(named: "DeviceLightOffIcon")
     static let deviceLightOnIcon = UIImage(named: "DeviceLightOnIcon")
     static let deviceRollerShutterIcon = UIImage(named: "DeviceRollerShutterIcon")
+    static let chevronRight = UIImage(named: "ChevronRight")
 }
