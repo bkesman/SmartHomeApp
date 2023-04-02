@@ -8,4 +8,5 @@
 import Foundation
 
 protocol LightSteeringViewContract: AnyObject {
+    func display(with viewModel: LightSteeringViewModel)
 }

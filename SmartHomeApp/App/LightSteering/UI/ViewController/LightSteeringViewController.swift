@@ -9,7 +9,8 @@ import Foundation
 import UIKit
 
 class LightSteeringViewController: UIViewController,
-                                   LightSteeringViewContract {
+                                   LightSteeringViewContract,
+                                   LightSteeringViewDelegate {
     
     public var presenter: LightSteeringPresenter?
     private let lightSteeringView = LightSteeringView()
@@ -26,6 +27,18 @@ class LightSteeringViewController: UIViewController,
         lightSteeringView.configure(with: viewModel)
     }
     
+    //MARK: LightSteeringViewDelegate
+    
+    func lightSteeringViewDelegate(didChangeIntensityValueForView: LightSteeringView,
+                                   newValue: Int) {
+        presenter?.didChangeIntensityValue(newValue: newValue)
+    }
+    
+    func lightSteeringViewDelegate(didChangePowerSwitchForView: LightSteeringView,
+                                   newValue: Bool) {
+        presenter?.didChangePower(newValue: newValue)
+    }
+
     private func setUp() {
         lightSteeringView.delegate = self
         view.addSubview(lightSteeringView)
