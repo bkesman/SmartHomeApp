@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+protocol LightSteeringPresenter {
+    func start()
+}
+
+protocol LightSteeringPresenterDelegate: AnyObject {
+}

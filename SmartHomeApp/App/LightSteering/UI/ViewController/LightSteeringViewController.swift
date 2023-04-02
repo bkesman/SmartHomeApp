@@ -6,3 +6,20 @@
 //
 
 import Foundation
+import UIKit
+
+class LightSteeringViewController: UIViewController,
+                                   LightSteeringViewContract {
+    
+    public var presenter: LightSteeringPresenter?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        presenter?.start()
+        setUp()
+    }
+    
+    private func setUp() {
+    }
+}
+
