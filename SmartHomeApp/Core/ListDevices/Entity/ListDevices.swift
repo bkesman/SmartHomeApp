@@ -7,6 +7,13 @@
 
 import Foundation
 
+enum Mode {
+    case On
+    case Off
+}
+
 struct ListDevices {
-    let devices: [Device]
+    var heaters: [HeaterProduct]
+    var rollerShutters: [RollerShutterProduct]
+    var lights: [LightProduct]
 }

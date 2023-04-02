@@ -7,23 +7,8 @@
 
 import Foundation
 
-enum Mode {
-    case On
-    case Off
-}
-
-enum ProductType {
-    case Heater
-    case RollerShutter
-    case Light
-}
-
 struct Device {
-    let id: Int
-    let deviceName: String
-    let intensity: Int?
-    let mode: Mode?
-    let temperature: Int?
-    let position: Int?
-    let productType: ProductType
+    let heaters: [HeaterProduct]
+    let rollerShutters: [RollerShutterProduct]
+    let lights: [LightProduct]
 }

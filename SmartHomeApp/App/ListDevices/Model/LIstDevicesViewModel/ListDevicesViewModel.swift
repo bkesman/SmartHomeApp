@@ -14,8 +14,16 @@ struct ListDevicesViewModel {
 }
 
 struct DeviceViewModel {
+    let id: Int
     let deviceName: String
     let currentState: String
     let currentStateIcon: UIImage?
     let isWorking: Bool
+    let productType: ProductType
+}
+
+enum ProductType {
+    case light
+    case rollerShutter
+    case heater
 }

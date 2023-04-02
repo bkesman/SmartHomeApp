@@ -8,83 +8,96 @@
 import Foundation
 
 struct ListDevicesViewModelMapper {
-
+    
     func map(listDevices: ListDevices) -> ListDevicesViewModel {
-        return ListDevicesViewModel(devices: mapDevices(devices: listDevices.devices))
+        
+        let heaters = mapHeaters(heaters: listDevices.heaters)
+        let lights = mapLights(lights: listDevices.lights)
+        let rollerShutters = mapRollerShutters(rollerShutters: listDevices.rollerShutters)
+        
+        return ListDevicesViewModel(devices: heaters+lights+rollerShutters)
     }
     
-    private func mapDevices(devices: [Device]) -> [DeviceViewModel] {
-        devices.compactMap { device in
-            switch device.productType {
-            case .Light:
-                return mapLight(device: device)
-            case .RollerShutter:
-                return mapRollerShutter(device: device)
-            case .Heater:
-                return mapHeater(device: device)
-            }
+    private func mapHeaters(heaters: [HeaterProduct]) -> [DeviceViewModel] {
+        heaters.compactMap { heaterProduct in
+            return mapHeater(heaterProduct: heaterProduct)
         }
     }
     
-    private func mapLight(device: Device) -> DeviceViewModel? {
-        switch device.mode {
+    private func mapHeater(heaterProduct: HeaterProduct)  -> DeviceViewModel {
+        switch heaterProduct.mode {
         case .On:
-            return DeviceViewModel(deviceName: device.deviceName,
-                                   currentState: "ON",
-                                   currentStateIcon: .deviceLightOnIcon,
-                                   isWorking: true)
-        case .Off:
-            return DeviceViewModel(deviceName: device.deviceName,
-                                   currentState: "OFF",
-                                   currentStateIcon: .deviceLightOffIcon,
-                                   isWorking: false)
-        case nil:
-            return nil
-        }
-    }
-    
-    private func mapRollerShutter(device: Device) -> DeviceViewModel? {
-        guard let position = device.position else {
-            return nil
-        }
-        switch position {
-        case 0:
-            return DeviceViewModel(deviceName: device.deviceName,
-                                   currentState: "Closed",
-                                   currentStateIcon: .deviceRollerShutterIcon,
-                                   isWorking: false)
-        case 1...99:
-            return DeviceViewModel(deviceName: device.deviceName,
-                                   currentState: "Opened at \(position)%",
-                                   currentStateIcon: .deviceRollerShutterIcon,
-                                   isWorking: true)
-        case 100:
-            return DeviceViewModel(deviceName: device.deviceName,
-                                   currentState: "Opened",
-                                   currentStateIcon: .deviceRollerShutterIcon,
-                                   isWorking: true)
-        default:
-            return nil
-        }
-    }
-    
-    private func mapHeater(device: Device)  -> DeviceViewModel? {
-        guard let temperature = device.temperature else {
-            return nil
-        }
-        switch device.mode {
-        case .On:
-            return DeviceViewModel(deviceName: device.deviceName,
-                                   currentState: "On at \(temperature)°C",
+            return DeviceViewModel(id: heaterProduct.id,
+                                   deviceName: heaterProduct.deviceName,
+                                   currentState: "On at \(heaterProduct.temperature)°C",
                                    currentStateIcon: .deviceHeaterOnIcon,
-                                   isWorking: true)
+                                   isWorking: true,
+                                   productType: .heater)
         case .Off:
-            return DeviceViewModel(deviceName: device.deviceName,
+            return DeviceViewModel(id: heaterProduct.id,
+                                   deviceName: heaterProduct.deviceName,
                                    currentState: "Off",
                                    currentStateIcon: .deviceHeaterOffIcon,
-                                   isWorking: false)
-        case nil:
-            return nil
+                                   isWorking: false,
+                                   productType: .heater)
+        }
+    }
+
+    private func mapLights(lights: [LightProduct]) -> [DeviceViewModel] {
+        lights.compactMap { lightProduct in
+            return mapLight(lightProduct: lightProduct)
+        }
+    }
+    
+    private func mapLight(lightProduct: LightProduct) -> DeviceViewModel {
+        switch lightProduct.mode {
+        case .On:
+            return DeviceViewModel(id: lightProduct.id,
+                                   deviceName: lightProduct.deviceName,
+                                   currentState: "ON",
+                                   currentStateIcon: .deviceLightOnIcon,
+                                   isWorking: true,
+                                   productType: .light)
+        case .Off:
+            return DeviceViewModel(id: lightProduct.id,
+                                   deviceName: lightProduct.deviceName,
+                                   currentState: "OFF",
+                                   currentStateIcon: .deviceLightOffIcon,
+                                   isWorking: false,
+                                   productType: .light)
+        }
+    }
+    
+    private func mapRollerShutters(rollerShutters: [RollerShutterProduct]) -> [DeviceViewModel] {
+        rollerShutters.compactMap { rollerShutterProduct in
+            return mapRollerShutter(rollerShutterProduct: rollerShutterProduct)
+        }
+    }
+    
+    private func mapRollerShutter(rollerShutterProduct: RollerShutterProduct) -> DeviceViewModel? {
+        switch rollerShutterProduct.position {
+        case 0:
+            return DeviceViewModel(id: rollerShutterProduct.id,
+                                   deviceName: rollerShutterProduct.deviceName,
+                                   currentState: "Closed",
+                                   currentStateIcon: .deviceRollerShutterIcon,
+                                   isWorking: false,
+                                   productType: .rollerShutter)
+        case 1...99:
+            return DeviceViewModel(id: rollerShutterProduct.id,
+                                   deviceName: rollerShutterProduct.deviceName,
+                                   currentState: "Opened at \(rollerShutterProduct.position)%",
+                                   currentStateIcon: .deviceRollerShutterIcon,
+                                   isWorking: true,
+                                   productType: .rollerShutter)
+        case 100:
+            return DeviceViewModel(id: rollerShutterProduct.id,
+                                   deviceName: rollerShutterProduct.deviceName,
+                                   currentState: "Opened",
+                                   currentStateIcon: .deviceRollerShutterIcon,
+                                   isWorking: true,
+                                   productType: .rollerShutter)
+        default: return nil
         }
     }
 }

@@ -36,6 +36,9 @@
 		6D0D48D629D920C900B19CC2 /* ListDevicesJson.json in Resources */ = {isa = PBXBuildFile; fileRef = 6D0D48D529D920C900B19CC2 /* ListDevicesJson.json */; };
 		6D0D48D829D9217D00B19CC2 /* ListDevicesJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0D48D729D9217D00B19CC2 /* ListDevicesJson.swift */; };
 		6D0D48DA29D99AE100B19CC2 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0D48D929D99AE100B19CC2 /* Device.swift */; };
+		6D0D48E029D9C05100B19CC2 /* HeaterProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0D48DF29D9C05100B19CC2 /* HeaterProduct.swift */; };
+		6D0D48E229D9C09D00B19CC2 /* RollerShutterProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0D48E129D9C09D00B19CC2 /* RollerShutterProduct.swift */; };
+		6D0D48E429D9C0C000B19CC2 /* LightProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0D48E329D9C0C000B19CC2 /* LightProduct.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +73,9 @@
 		6D0D48D529D920C900B19CC2 /* ListDevicesJson.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ListDevicesJson.json; sourceTree = "<group>"; };
 		6D0D48D729D9217D00B19CC2 /* ListDevicesJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDevicesJson.swift; sourceTree = "<group>"; };
 		6D0D48D929D99AE100B19CC2 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		6D0D48DF29D9C05100B19CC2 /* HeaterProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaterProduct.swift; sourceTree = "<group>"; };
+		6D0D48E129D9C09D00B19CC2 /* RollerShutterProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollerShutterProduct.swift; sourceTree = "<group>"; };
+		6D0D48E329D9C0C000B19CC2 /* LightProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightProduct.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,6 +245,9 @@
 			children = (
 				6D0D48B729D90C8600B19CC2 /* ListDevices.swift */,
 				6D0D48D929D99AE100B19CC2 /* Device.swift */,
+				6D0D48E129D9C09D00B19CC2 /* RollerShutterProduct.swift */,
+				6D0D48DF29D9C05100B19CC2 /* HeaterProduct.swift */,
+				6D0D48E329D9C0C000B19CC2 /* LightProduct.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -374,6 +383,7 @@
 				6D0D489E29D8D17E00B19CC2 /* ListDevicesPresenter.swift in Sources */,
 				6D0D489A29D8D16200B19CC2 /* ListDevicesViewModel.swift in Sources */,
 				6D0D489829D8D15900B19CC2 /* DeviceTableViewCell.swift in Sources */,
+				6D0D48E029D9C05100B19CC2 /* HeaterProduct.swift in Sources */,
 				6D0D488D29D8CD1500B19CC2 /* ListDevicesCoordinator.swift in Sources */,
 				6D0D48D829D9217D00B19CC2 /* ListDevicesJson.swift in Sources */,
 				6D0D48B229D8FFB400B19CC2 /* SmartHomeApp.xcdatamodeld in Sources */,
@@ -389,9 +399,11 @@
 				6D0D48A029D8D20900B19CC2 /* ListDevicesViewContract.swift in Sources */,
 				6D0D48B429D9022000B19CC2 /* ListDevicesTableViewDataSource.swift in Sources */,
 				6D0D48C729D910F600B19CC2 /* ListDevicesRepositoryImplementation.swift in Sources */,
+				6D0D48E229D9C09D00B19CC2 /* RollerShutterProduct.swift in Sources */,
 				6D0D489629D8D14500B19CC2 /* ListDevicesViewController.swift in Sources */,
 				6D0D48A929D8EBF700B19CC2 /* DependencyProvider.swift in Sources */,
 				6D0D48B829D90C8600B19CC2 /* ListDevices.swift in Sources */,
+				6D0D48E429D9C0C000B19CC2 /* LightProduct.swift in Sources */,
 				6D0D487529D8CBEF00B19CC2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
