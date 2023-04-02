@@ -8,4 +8,8 @@
 import Foundation
 
 struct LightSteeringViewModelMapper {
+    
+    func map(product: LightProduct) -> LightSteeringViewModel {
+        return LightSteeringViewModel(mode: product.mode, intensity: product.intensity)
+    }
 }

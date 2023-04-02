@@ -8,4 +8,6 @@
 import Foundation
 
 struct LightSteeringViewModel{
+    let mode: Mode
+    let intensity: Int
 }
