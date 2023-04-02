@@ -12,6 +12,7 @@ class LightSteeringViewController: UIViewController,
                                    LightSteeringViewContract {
     
     public var presenter: LightSteeringPresenter?
+    private let lightSteeringView = LightSteeringView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +20,20 @@ class LightSteeringViewController: UIViewController,
         setUp()
     }
     
+    //MARK: LightSteeringViewContract
+    
+    func display(with viewModel: LightSteeringViewModel) {
+        lightSteeringView.configure(with: viewModel)
+    }
+    
     private func setUp() {
+        lightSteeringView.delegate = self
+        view.addSubview(lightSteeringView)
+        lightSteeringView.translatesAutoresizingMaskIntoConstraints = false
+        lightSteeringView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        lightSteeringView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        lightSteeringView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        lightSteeringView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
     }
 }
 
