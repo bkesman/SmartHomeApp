@@ -11,12 +11,15 @@ class ListDevicesPresenterImplementation: ListDevicesPresenter {
     
     weak var viewContract: ListDevicesViewContract?
     weak var delegate: ListDevicesPresenterDelegate?
+    private let listDevicesInteractor: ListDevicesInteractor
     private let mapper = ListDevicesViewModelMapper()
  
     init(viewContract: ListDevicesViewContract?,
-         delegate: ListDevicesPresenterDelegate?) {
+         delegate: ListDevicesPresenterDelegate?,
+         listDevicesInteractor: ListDevicesInteractor) {
         self.viewContract = viewContract
         self.delegate = delegate
+        self.listDevicesInteractor = listDevicesInteractor
     }
     
     //MARK: ListDevicesPresenter

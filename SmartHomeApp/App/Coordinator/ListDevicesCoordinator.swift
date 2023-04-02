@@ -20,7 +20,8 @@ class ListDevicesCoordinator: ListDevicesPresenterDelegate {
     func start() {
         let viewController = ListDevicesViewController()
         viewController.presenter = DependencyProvider.shared.listDevicesPresenter(viewContract: viewController,
-                                                                                  delegate: self)
+                                                                                  delegate: self,
+                                                                                  listDevicesInteractor: DependencyProvider.shared.listDevicesInteractor())
         rootViewController.addChild(navigationController)
         rootViewController.view.addSubview(navigationController.view)
         navigationController.didMove(toParent: rootViewController)

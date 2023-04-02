@@ -11,9 +11,19 @@ class DependencyProvider {
     static let shared = DependencyProvider()
 
     func listDevicesPresenter(viewContract: ListDevicesViewContract,
-                                delegate: ListDevicesPresenterDelegate) -> ListDevicesPresenter? {
+                              delegate: ListDevicesPresenterDelegate,
+                              listDevicesInteractor: ListDevicesInteractor) -> ListDevicesPresenter? {
         return ListDevicesPresenterImplementation(viewContract: viewContract,
-                                                  delegate: delegate)
+                                                  delegate: delegate,
+                                                  listDevicesInteractor: listDevicesInteractor)
+    }
+    
+    func listDevicesInteractor() -> ListDevicesInteractor {
+        return ListDevicesInteractorImplementation(listDevicesRepository: listDevicesRepository())
+    }
+    
+    func listDevicesRepository() -> ListDevicesRepository {
+        return ListDevicesRepositoryImplementation()
     }
 }
 
