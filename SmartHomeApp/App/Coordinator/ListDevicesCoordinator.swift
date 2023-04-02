@@ -8,7 +8,8 @@
 import Foundation
 import UIKit
 
-class ListDevicesCoordinator: ListDevicesPresenterDelegate {
+class ListDevicesCoordinator: ListDevicesPresenterDelegate,
+                              LightSteeringPresenterDelegate {
     
     let rootViewController: UIViewController
     let navigationController = UINavigationController()
@@ -28,7 +29,11 @@ class ListDevicesCoordinator: ListDevicesPresenterDelegate {
     }
     
     func didSelectLightProduct(_ product: LightProduct) {
-        
+        let viewController = LightSteeringViewController()
+        viewController.presenter = DependencyProvider.shared.lightSteeringPresenter(viewContract: viewController,
+                                                                                    delegate: self,
+                                                                                    lightProduct: product)
+        navigationController.pushViewController(viewController, animated: true)
     }
     
     func start() {
