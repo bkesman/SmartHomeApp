@@ -25,5 +25,13 @@ class DependencyProvider {
     func listDevicesRepository() -> ListDevicesRepository {
         return ListDevicesRepositoryImplementation()
     }
+    
+    func lightSteeringPresenter(viewContract: LightSteeringViewContract,
+                                delegate: LightSteeringPresenterDelegate,
+                                lightProduct: LightProduct) -> LightSteeringPresenterimplementation? {
+        return LightSteeringPresenterimplementation(viewContract: viewContract,
+                                                    delegate: delegate,
+                                                    lightProduct: lightProduct)
+    }
 }
 
