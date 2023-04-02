@@ -26,6 +26,7 @@
 		6D0D48AF29D8F40800B19CC2 /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D0D48AE29D8F40800B19CC2 /* Image.xcassets */; };
 		6D0D48B229D8FFB400B19CC2 /* SmartHomeApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6D0D48B029D8FFB400B19CC2 /* SmartHomeApp.xcdatamodeld */; };
 		6D0D48B429D9022000B19CC2 /* ListDevicesTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0D48B329D9022000B19CC2 /* ListDevicesTableViewDataSource.swift */; };
+		6D0D48D629D920C900B19CC2 /* ListDevicesJson.json in Resources */ = {isa = PBXBuildFile; fileRef = 6D0D48D529D920C900B19CC2 /* ListDevicesJson.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		6D0D48AE29D8F40800B19CC2 /* Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Image.xcassets; path = SmartHomeApp/Image.xcassets; sourceTree = SOURCE_ROOT; };
 		6D0D48B129D8FFB400B19CC2 /* SmartHomeApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SmartHomeApp.xcdatamodel; sourceTree = "<group>"; };
 		6D0D48B329D9022000B19CC2 /* ListDevicesTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDevicesTableViewDataSource.swift; sourceTree = "<group>"; };
+		6D0D48D529D920C900B19CC2 /* ListDevicesJson.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ListDevicesJson.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 		6D0D488829D8CCB900B19CC2 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				6D0D48C229D910B700B19CC2 /* ListDevices */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -202,6 +205,22 @@
 			path = DI;
 			sourceTree = "<group>";
 		};
+		6D0D48C229D910B700B19CC2 /* ListDevices */ = {
+			isa = PBXGroup;
+			children = (
+				6D0D48D429D91C3700B19CC2 /* JsonData */,
+			);
+			path = ListDevices;
+			sourceTree = "<group>";
+		};
+		6D0D48D429D91C3700B19CC2 /* JsonData */ = {
+			isa = PBXGroup;
+			children = (
+				6D0D48D529D920C900B19CC2 /* ListDevicesJson.json */,
+			);
+			path = JsonData;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -261,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D0D487F29D8CBF100B19CC2 /* LaunchScreen.storyboard in Resources */,
+				6D0D48D629D920C900B19CC2 /* ListDevicesJson.json in Resources */,
 				6D0D48AF29D8F40800B19CC2 /* Image.xcassets in Resources */,
 				6D0D487C29D8CBF100B19CC2 /* Assets.xcassets in Resources */,
 			);
