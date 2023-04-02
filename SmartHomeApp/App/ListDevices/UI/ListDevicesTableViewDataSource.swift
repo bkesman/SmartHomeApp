@@ -21,6 +21,7 @@ class ListDevicesTableViewDataSource: NSObject,
     func configure(_ tableView: UITableView, with viewModels: ListDevicesViewModel) {
         self.viewModels = viewModels
         tableView.reloadData()
+        tableView.register(DeviceTableViewCell.self, forCellReuseIdentifier: "Device")
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -29,6 +30,12 @@ class ListDevicesTableViewDataSource: NSObject,
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) ->
     UITableViewCell {
-        return UITableViewCell()
+        let viewModel = viewModels.devices[indexPath.row]
+        guard
+            let cell = tableView.dequeueReusableCell(withIdentifier: "Device", for: indexPath) as? DeviceTableViewCell else {
+            fatalError("Unexpected dequeued cell")
+        }
+        cell.configure(with: viewModel)
+        return cell
     }
 }
