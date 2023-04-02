@@ -15,7 +15,7 @@
 		6D0D488B29D8CCDF00B19CC2 /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0D488A29D8CCDF00B19CC2 /* RootCoordinator.swift */; };
 		6D0D488D29D8CD1500B19CC2 /* ListDevicesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0D488C29D8CD1500B19CC2 /* ListDevicesCoordinator.swift */; };
 		6D0D489629D8D14500B19CC2 /* ListDevicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0D489529D8D14500B19CC2 /* ListDevicesViewController.swift */; };
-		6D0D489829D8D15900B19CC2 /* ListDevicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0D489729D8D15900B19CC2 /* ListDevicesView.swift */; };
+		6D0D489829D8D15900B19CC2 /* DeviceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0D489729D8D15900B19CC2 /* DeviceTableViewCell.swift */; };
 		6D0D489A29D8D16200B19CC2 /* ListDevicesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0D489929D8D16200B19CC2 /* ListDevicesViewModel.swift */; };
 		6D0D489C29D8D16D00B19CC2 /* ListDevicesViewModelMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0D489B29D8D16D00B19CC2 /* ListDevicesViewModelMapper.swift */; };
 		6D0D489E29D8D17E00B19CC2 /* ListDevicesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0D489D29D8D17E00B19CC2 /* ListDevicesPresenter.swift */; };
@@ -49,7 +49,7 @@
 		6D0D488A29D8CCDF00B19CC2 /* RootCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinator.swift; sourceTree = "<group>"; };
 		6D0D488C29D8CD1500B19CC2 /* ListDevicesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDevicesCoordinator.swift; sourceTree = "<group>"; };
 		6D0D489529D8D14500B19CC2 /* ListDevicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDevicesViewController.swift; sourceTree = "<group>"; };
-		6D0D489729D8D15900B19CC2 /* ListDevicesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDevicesView.swift; sourceTree = "<group>"; };
+		6D0D489729D8D15900B19CC2 /* DeviceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceTableViewCell.swift; sourceTree = "<group>"; };
 		6D0D489929D8D16200B19CC2 /* ListDevicesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDevicesViewModel.swift; sourceTree = "<group>"; };
 		6D0D489B29D8D16D00B19CC2 /* ListDevicesViewModelMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDevicesViewModelMapper.swift; sourceTree = "<group>"; };
 		6D0D489D29D8D17E00B19CC2 /* ListDevicesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDevicesPresenter.swift; sourceTree = "<group>"; };
@@ -195,7 +195,7 @@
 		6D0D489229D8CEE200B19CC2 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				6D0D489729D8D15900B19CC2 /* ListDevicesView.swift */,
+				6D0D489729D8D15900B19CC2 /* DeviceTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -373,7 +373,7 @@
 				6D0D48BF29D9101E00B19CC2 /* ListDevicesInteractor.swift in Sources */,
 				6D0D489E29D8D17E00B19CC2 /* ListDevicesPresenter.swift in Sources */,
 				6D0D489A29D8D16200B19CC2 /* ListDevicesViewModel.swift in Sources */,
-				6D0D489829D8D15900B19CC2 /* ListDevicesView.swift in Sources */,
+				6D0D489829D8D15900B19CC2 /* DeviceTableViewCell.swift in Sources */,
 				6D0D488D29D8CD1500B19CC2 /* ListDevicesCoordinator.swift in Sources */,
 				6D0D48D829D9217D00B19CC2 /* ListDevicesJson.swift in Sources */,
 				6D0D48B229D8FFB400B19CC2 /* SmartHomeApp.xcdatamodeld in Sources */,
