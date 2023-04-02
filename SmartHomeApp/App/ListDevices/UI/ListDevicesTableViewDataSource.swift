@@ -16,9 +16,15 @@ class ListDevicesTableViewDataSource: NSObject,
                                               UITableViewDelegate {
     
     var delegate: ListDevicesTableViewDataSourceDelegate?
+    var viewModels: ListDevicesViewModel = .empty
+    
+    func configure(_ tableView: UITableView, with viewModels: ListDevicesViewModel) {
+        self.viewModels = viewModels
+        tableView.reloadData()
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return viewModels.devices.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) ->

@@ -22,6 +22,12 @@ class ListDevicesViewController: UIViewController,
         setUp()
     }
     
+    //MARK: ListDevicesViewContract
+
+    func display(viewModels: ListDevicesViewModel) {
+        dataSource.configure(tableView,with: viewModels)
+    }
+    
     private func createTableView() -> UITableView {
         let tableView = UITableView()
         tableView.dataSource = dataSource

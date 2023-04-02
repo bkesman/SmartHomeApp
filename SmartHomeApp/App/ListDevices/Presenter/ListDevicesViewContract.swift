@@ -8,4 +8,5 @@
 import Foundation
 
 protocol ListDevicesViewContract: AnyObject {
+    func display(viewModels: ListDevicesViewModel)
 }
