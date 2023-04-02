@@ -17,6 +17,20 @@ class ListDevicesCoordinator: ListDevicesPresenterDelegate {
         self.rootViewController = rootViewController
     }
     
+    //MARK: ListDevicesPresenterDelegate
+    
+    func didSelectRollerShutterProduct(_ product: RollerShutterProduct) {
+        
+    }
+    
+    func didSelectHeaterProduct(_ product: HeaterProduct) {
+        
+    }
+    
+    func didSelectLightProduct(_ product: LightProduct) {
+        
+    }
+    
     func start() {
         let viewController = ListDevicesViewController()
         viewController.presenter = DependencyProvider.shared.listDevicesPresenter(viewContract: viewController,

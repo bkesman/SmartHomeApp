@@ -127,6 +127,9 @@
 		6D0D488629D8CCB200B19CC2 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				6D0D48ED29DA07B700B19CC2 /* LightSteering */,
+				6D0D48EC29DA076700B19CC2 /* HeaterSteering */,
+				6D0D48E529D9ED1B00B19CC2 /* RollerShutterSteering */,
 				6D0D48A729D8EBE000B19CC2 /* DI */,
 				6D0D488E29D8CEC500B19CC2 /* ListDevices */,
 				6D0D488929D8CCBF00B19CC2 /* Coordinator */,
@@ -303,6 +306,171 @@
 				6D0D48D529D920C900B19CC2 /* ListDevicesJson.json */,
 			);
 			path = JsonData;
+			sourceTree = "<group>";
+		};
+		6D0D48E529D9ED1B00B19CC2 /* RollerShutterSteering */ = {
+			isa = PBXGroup;
+			children = (
+				6D0D48E829D9ED5700B19CC2 /* Model */,
+				6D0D48E729D9ED5100B19CC2 /* Presenter */,
+				6D0D48E629D9ED4C00B19CC2 /* UI */,
+			);
+			path = RollerShutterSteering;
+			sourceTree = "<group>";
+		};
+		6D0D48E629D9ED4C00B19CC2 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				6D0D48EB29D9EDA600B19CC2 /* View */,
+				6D0D48EA29D9ED9F00B19CC2 /* ViewController */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		6D0D48E729D9ED5100B19CC2 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		6D0D48E829D9ED5700B19CC2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6D0D48E929D9ED6700B19CC2 /* RollerShutterSteeringViewModel */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6D0D48E929D9ED6700B19CC2 /* RollerShutterSteeringViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RollerShutterSteeringViewModel;
+			sourceTree = "<group>";
+		};
+		6D0D48EA29D9ED9F00B19CC2 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		6D0D48EB29D9EDA600B19CC2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6D0D48EC29DA076700B19CC2 /* HeaterSteering */ = {
+			isa = PBXGroup;
+			children = (
+				6D0D48F229DA07EE00B19CC2 /* Model */,
+				6D0D48F129DA07E300B19CC2 /* Presenter */,
+				6D0D48EE29DA07C700B19CC2 /* UI */,
+			);
+			path = HeaterSteering;
+			sourceTree = "<group>";
+		};
+		6D0D48ED29DA07B700B19CC2 /* LightSteering */ = {
+			isa = PBXGroup;
+			children = (
+				6D0D48F929DA087600B19CC2 /* Presenter */,
+				6D0D48F729DA086800B19CC2 /* Model */,
+				6D0D48F429DA084F00B19CC2 /* UI */,
+			);
+			path = LightSteering;
+			sourceTree = "<group>";
+		};
+		6D0D48EE29DA07C700B19CC2 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				6D0D48F029DA07D900B19CC2 /* ViewController */,
+				6D0D48EF29DA07CA00B19CC2 /* View */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		6D0D48EF29DA07CA00B19CC2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6D0D48F029DA07D900B19CC2 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		6D0D48F129DA07E300B19CC2 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		6D0D48F229DA07EE00B19CC2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6D0D48F329DA084500B19CC2 /* HeaterSteeringViewModel */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6D0D48F329DA084500B19CC2 /* HeaterSteeringViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HeaterSteeringViewModel;
+			sourceTree = "<group>";
+		};
+		6D0D48F429DA084F00B19CC2 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				6D0D48F629DA085500B19CC2 /* ViewController */,
+				6D0D48F529DA085100B19CC2 /* View */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		6D0D48F529DA085100B19CC2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6D0D48F629DA085500B19CC2 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		6D0D48F729DA086800B19CC2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6D0D48F829DA086B00B19CC2 /* LightSteeringViewModel */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6D0D48F829DA086B00B19CC2 /* LightSteeringViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LightSteeringViewModel;
+			sourceTree = "<group>";
+		};
+		6D0D48F929DA087600B19CC2 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

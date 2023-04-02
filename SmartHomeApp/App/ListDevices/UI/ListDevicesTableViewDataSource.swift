@@ -9,6 +9,10 @@ import Foundation
 import UIKit
 
 protocol ListDevicesTableViewDataSourceDelegate {
+    func listDevicesTableViewDataSource(_ dataSource: ListDevicesTableViewDataSource,
+                                        didSelectRowWithIndexPath indexPath: IndexPath,
+                                        with id: Int,
+                                        productType: ProductType)
 }
 
 class ListDevicesTableViewDataSource: NSObject,
@@ -37,5 +41,12 @@ class ListDevicesTableViewDataSource: NSObject,
         }
         cell.configure(with: viewModel)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        delegate?.listDevicesTableViewDataSource(self,
+                                                 didSelectRowWithIndexPath: indexPath,
+                                                 with: viewModels.devices[indexPath.row].id,
+                                                 productType: viewModels.devices[indexPath.row].productType)
     }
 }

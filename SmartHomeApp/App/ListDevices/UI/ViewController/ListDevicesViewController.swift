@@ -28,6 +28,15 @@ class ListDevicesViewController: UIViewController,
         dataSource.configure(tableView,with: viewModels)
     }
     
+    //MARK: ListDevicesTableViewDataSourceDelegate
+    
+    func listDevicesTableViewDataSource(_ dataSource: ListDevicesTableViewDataSource,
+                                        didSelectRowWithIndexPath indexPath: IndexPath,
+                                        with id: Int,
+                                        productType: ProductType) {
+        presenter?.didSelectDevice(with: id, productType: productType)
+    }
+    
     private func createTableView() -> UITableView {
         let tableView = UITableView()
         tableView.dataSource = dataSource

@@ -7,9 +7,13 @@
 
 import Foundation
 
-public protocol ListDevicesPresenter {
+protocol ListDevicesPresenter {
     func start()
+    func didSelectDevice(with id: Int, productType: ProductType)
 }
 
-public protocol ListDevicesPresenterDelegate: AnyObject {
+protocol ListDevicesPresenterDelegate: AnyObject {
+    func didSelectRollerShutterProduct(_ product: RollerShutterProduct)
+    func didSelectHeaterProduct(_ product: HeaterProduct)
+    func didSelectLightProduct(_ product: LightProduct)
 }
