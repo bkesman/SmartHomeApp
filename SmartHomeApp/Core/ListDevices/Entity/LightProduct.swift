@@ -10,6 +10,6 @@ import Foundation
 struct LightProduct {
     let id: Int
     let deviceName: String
-    let intensity: Int
-    let mode: Mode
+    var intensity: Int
+    var mode: Mode
 }
