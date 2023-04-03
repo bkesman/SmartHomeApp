@@ -28,10 +28,12 @@ class DependencyProvider {
     
     func lightSteeringPresenter(viewContract: LightSteeringViewContract,
                                 delegate: LightSteeringPresenterDelegate,
-                                lightProduct: LightProduct) -> LightSteeringPresenterimplementation? {
+                                lightProduct: LightProduct,
+                                listDevicesInteractor: ListDevicesInteractor) -> LightSteeringPresenterimplementation? {
         return LightSteeringPresenterimplementation(viewContract: viewContract,
                                                     delegate: delegate,
-                                                    lightProduct: lightProduct)
+                                                    lightProduct: lightProduct,
+                                                    listDevicesInteractor: listDevicesInteractor)
     }
 }
 

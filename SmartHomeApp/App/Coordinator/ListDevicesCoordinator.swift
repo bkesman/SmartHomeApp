@@ -32,7 +32,8 @@ class ListDevicesCoordinator: ListDevicesPresenterDelegate,
         let viewController = LightSteeringViewController()
         viewController.presenter = DependencyProvider.shared.lightSteeringPresenter(viewContract: viewController,
                                                                                     delegate: self,
-                                                                                    lightProduct: product)
+                                                                                    lightProduct: product,
+                                                                                    listDevicesInteractor: DependencyProvider.shared.listDevicesInteractor())
         navigationController.pushViewController(viewController, animated: true)
     }
     

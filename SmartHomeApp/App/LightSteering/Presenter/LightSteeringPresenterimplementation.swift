@@ -13,13 +13,16 @@ class LightSteeringPresenterimplementation: LightSteeringPresenter {
     weak var delegate: LightSteeringPresenterDelegate?
     private let mapper = LightSteeringViewModelMapper()
     private var lightProduct: LightProduct
+    private let listDevicesInteractor: ListDevicesInteractor
     
     init(viewContract: LightSteeringViewContract?,
          delegate: LightSteeringPresenterDelegate?,
-         lightProduct: LightProduct) {
+         lightProduct: LightProduct,
+         listDevicesInteractor: ListDevicesInteractor) {
         self.viewContract = viewContract
         self.delegate = delegate
         self.lightProduct = lightProduct
+        self.listDevicesInteractor = listDevicesInteractor
     }
     
     //MARK: LightSteeringPresenter
