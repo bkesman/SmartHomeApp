@@ -23,7 +23,5 @@ enum Mode {
 }
 
 struct ListDevices {
-    var heaters: [HeaterProduct]
-    var rollerShutters: [RollerShutterProduct]
-    var lights: [LightProduct]
+    var devices: [Device]
 }

@@ -8,7 +8,5 @@
 import Foundation
 
 struct RollerShutterProduct {
-    let id: Int
-    let deviceName: String
     let position: Int
 }

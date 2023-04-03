@@ -8,8 +8,6 @@
 import Foundation
 
 struct HeaterProduct {
-    let id: Int
-    let deviceName: String
     let mode: Mode
     let temperature: Int
 }
