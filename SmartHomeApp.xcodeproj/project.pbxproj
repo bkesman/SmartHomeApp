@@ -39,14 +39,17 @@
 		6D0D48E029D9C05100B19CC2 /* HeaterProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0D48DF29D9C05100B19CC2 /* HeaterProduct.swift */; };
 		6D0D48E229D9C09D00B19CC2 /* RollerShutterProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0D48E129D9C09D00B19CC2 /* RollerShutterProduct.swift */; };
 		6D0D48E429D9C0C000B19CC2 /* LightProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0D48E329D9C0C000B19CC2 /* LightProduct.swift */; };
-		6D0D48FB29DA0A9700B19CC2 /* LightSteeringPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0D48FA29DA0A9700B19CC2 /* LightSteeringPresenter.swift */; };
+		6D0D48FB29DA0A9700B19CC2 /* DeviceSteeringPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0D48FA29DA0A9700B19CC2 /* DeviceSteeringPresenter.swift */; };
 		6D0D48FD29DA0AB100B19CC2 /* LightSteeringViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0D48FC29DA0AB100B19CC2 /* LightSteeringViewModel.swift */; };
-		6D0D48FF29DA0AD100B19CC2 /* LightSteeringViewModelMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0D48FE29DA0AD100B19CC2 /* LightSteeringViewModelMapper.swift */; };
-		6D0D490129DA0B0A00B19CC2 /* LightSteeringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0D490029DA0B0A00B19CC2 /* LightSteeringViewController.swift */; };
+		6D0D48FF29DA0AD100B19CC2 /* DeviceSteeringViewModelMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0D48FE29DA0AD100B19CC2 /* DeviceSteeringViewModelMapper.swift */; };
+		6D0D490129DA0B0A00B19CC2 /* DeviceSteeringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0D490029DA0B0A00B19CC2 /* DeviceSteeringViewController.swift */; };
 		6D0D490329DA0B1200B19CC2 /* LightSteeringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0D490229DA0B1200B19CC2 /* LightSteeringView.swift */; };
-		6D0D490529DA0B4800B19CC2 /* LightSteeringViewContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0D490429DA0B4800B19CC2 /* LightSteeringViewContract.swift */; };
-		6D0D490729DA0BFE00B19CC2 /* LightSteeringPresenterimplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0D490629DA0BFE00B19CC2 /* LightSteeringPresenterimplementation.swift */; };
+		6D0D490529DA0B4800B19CC2 /* DeviceSteeringViewContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0D490429DA0B4800B19CC2 /* DeviceSteeringViewContract.swift */; };
+		6D0D490729DA0BFE00B19CC2 /* DeviceSteeringPresenterImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0D490629DA0BFE00B19CC2 /* DeviceSteeringPresenterImplementation.swift */; };
 		6D0D490E29DA560800B19CC2 /* LightProductMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0D490D29DA560800B19CC2 /* LightProductMapper.swift */; };
+		6D0D491029DB955700B19CC2 /* HeaterSteeringViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0D490F29DB955700B19CC2 /* HeaterSteeringViewModel.swift */; };
+		6D0D491229DB956700B19CC2 /* RollerShutterSteeringViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0D491129DB956700B19CC2 /* RollerShutterSteeringViewModel.swift */; };
+		6D0D491429DB957600B19CC2 /* DeviceSteeringViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0D491329DB957600B19CC2 /* DeviceSteeringViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,14 +87,17 @@
 		6D0D48DF29D9C05100B19CC2 /* HeaterProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaterProduct.swift; sourceTree = "<group>"; };
 		6D0D48E129D9C09D00B19CC2 /* RollerShutterProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollerShutterProduct.swift; sourceTree = "<group>"; };
 		6D0D48E329D9C0C000B19CC2 /* LightProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightProduct.swift; sourceTree = "<group>"; };
-		6D0D48FA29DA0A9700B19CC2 /* LightSteeringPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightSteeringPresenter.swift; sourceTree = "<group>"; };
+		6D0D48FA29DA0A9700B19CC2 /* DeviceSteeringPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceSteeringPresenter.swift; sourceTree = "<group>"; };
 		6D0D48FC29DA0AB100B19CC2 /* LightSteeringViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightSteeringViewModel.swift; sourceTree = "<group>"; };
-		6D0D48FE29DA0AD100B19CC2 /* LightSteeringViewModelMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightSteeringViewModelMapper.swift; sourceTree = "<group>"; };
-		6D0D490029DA0B0A00B19CC2 /* LightSteeringViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightSteeringViewController.swift; sourceTree = "<group>"; };
+		6D0D48FE29DA0AD100B19CC2 /* DeviceSteeringViewModelMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceSteeringViewModelMapper.swift; sourceTree = "<group>"; };
+		6D0D490029DA0B0A00B19CC2 /* DeviceSteeringViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceSteeringViewController.swift; sourceTree = "<group>"; };
 		6D0D490229DA0B1200B19CC2 /* LightSteeringView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightSteeringView.swift; sourceTree = "<group>"; };
-		6D0D490429DA0B4800B19CC2 /* LightSteeringViewContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightSteeringViewContract.swift; sourceTree = "<group>"; };
-		6D0D490629DA0BFE00B19CC2 /* LightSteeringPresenterimplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightSteeringPresenterimplementation.swift; sourceTree = "<group>"; };
+		6D0D490429DA0B4800B19CC2 /* DeviceSteeringViewContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceSteeringViewContract.swift; sourceTree = "<group>"; };
+		6D0D490629DA0BFE00B19CC2 /* DeviceSteeringPresenterImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceSteeringPresenterImplementation.swift; sourceTree = "<group>"; };
 		6D0D490D29DA560800B19CC2 /* LightProductMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightProductMapper.swift; sourceTree = "<group>"; };
+		6D0D490F29DB955700B19CC2 /* HeaterSteeringViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaterSteeringViewModel.swift; sourceTree = "<group>"; };
+		6D0D491129DB956700B19CC2 /* RollerShutterSteeringViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollerShutterSteeringViewModel.swift; sourceTree = "<group>"; };
+		6D0D491329DB957600B19CC2 /* DeviceSteeringViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceSteeringViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,9 +149,7 @@
 		6D0D488629D8CCB200B19CC2 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				6D0D48ED29DA07B700B19CC2 /* LightSteering */,
-				6D0D48EC29DA076700B19CC2 /* HeaterSteering */,
-				6D0D48E529D9ED1B00B19CC2 /* RollerShutterSteering */,
+				6D0D48ED29DA07B700B19CC2 /* DeviceSteering */,
 				6D0D48A729D8EBE000B19CC2 /* DI */,
 				6D0D488E29D8CEC500B19CC2 /* ListDevices */,
 				6D0D488929D8CCBF00B19CC2 /* Coordinator */,
@@ -325,124 +329,14 @@
 			path = JsonData;
 			sourceTree = "<group>";
 		};
-		6D0D48E529D9ED1B00B19CC2 /* RollerShutterSteering */ = {
-			isa = PBXGroup;
-			children = (
-				6D0D48E829D9ED5700B19CC2 /* Model */,
-				6D0D48E729D9ED5100B19CC2 /* Presenter */,
-				6D0D48E629D9ED4C00B19CC2 /* UI */,
-			);
-			path = RollerShutterSteering;
-			sourceTree = "<group>";
-		};
-		6D0D48E629D9ED4C00B19CC2 /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				6D0D48EB29D9EDA600B19CC2 /* View */,
-				6D0D48EA29D9ED9F00B19CC2 /* ViewController */,
-			);
-			path = UI;
-			sourceTree = "<group>";
-		};
-		6D0D48E729D9ED5100B19CC2 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		6D0D48E829D9ED5700B19CC2 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				6D0D48E929D9ED6700B19CC2 /* RollerShutterSteeringViewModel */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		6D0D48E929D9ED6700B19CC2 /* RollerShutterSteeringViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = RollerShutterSteeringViewModel;
-			sourceTree = "<group>";
-		};
-		6D0D48EA29D9ED9F00B19CC2 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
-		6D0D48EB29D9EDA600B19CC2 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		6D0D48EC29DA076700B19CC2 /* HeaterSteering */ = {
-			isa = PBXGroup;
-			children = (
-				6D0D48F229DA07EE00B19CC2 /* Model */,
-				6D0D48F129DA07E300B19CC2 /* Presenter */,
-				6D0D48EE29DA07C700B19CC2 /* UI */,
-			);
-			path = HeaterSteering;
-			sourceTree = "<group>";
-		};
-		6D0D48ED29DA07B700B19CC2 /* LightSteering */ = {
+		6D0D48ED29DA07B700B19CC2 /* DeviceSteering */ = {
 			isa = PBXGroup;
 			children = (
 				6D0D48F929DA087600B19CC2 /* Presenter */,
 				6D0D48F729DA086800B19CC2 /* Model */,
 				6D0D48F429DA084F00B19CC2 /* UI */,
 			);
-			path = LightSteering;
-			sourceTree = "<group>";
-		};
-		6D0D48EE29DA07C700B19CC2 /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				6D0D48F029DA07D900B19CC2 /* ViewController */,
-				6D0D48EF29DA07CA00B19CC2 /* View */,
-			);
-			path = UI;
-			sourceTree = "<group>";
-		};
-		6D0D48EF29DA07CA00B19CC2 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		6D0D48F029DA07D900B19CC2 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
-		6D0D48F129DA07E300B19CC2 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		6D0D48F229DA07EE00B19CC2 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				6D0D48F329DA084500B19CC2 /* HeaterSteeringViewModel */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		6D0D48F329DA084500B19CC2 /* HeaterSteeringViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = HeaterSteeringViewModel;
+			path = DeviceSteering;
 			sourceTree = "<group>";
 		};
 		6D0D48F429DA084F00B19CC2 /* UI */ = {
@@ -450,7 +344,7 @@
 			children = (
 				6D0D48F629DA085500B19CC2 /* ViewController */,
 				6D0D48F529DA085100B19CC2 /* View */,
-				6D0D490429DA0B4800B19CC2 /* LightSteeringViewContract.swift */,
+				6D0D490429DA0B4800B19CC2 /* DeviceSteeringViewContract.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -466,7 +360,7 @@
 		6D0D48F629DA085500B19CC2 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				6D0D490029DA0B0A00B19CC2 /* LightSteeringViewController.swift */,
+				6D0D490029DA0B0A00B19CC2 /* DeviceSteeringViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -474,25 +368,28 @@
 		6D0D48F729DA086800B19CC2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				6D0D48F829DA086B00B19CC2 /* LightSteeringViewModel */,
-				6D0D48FC29DA0AB100B19CC2 /* LightSteeringViewModel.swift */,
-				6D0D48FE29DA0AD100B19CC2 /* LightSteeringViewModelMapper.swift */,
+				6D0D48F829DA086B00B19CC2 /* DeviceSteeringViewModel */,
+				6D0D48FE29DA0AD100B19CC2 /* DeviceSteeringViewModelMapper.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		6D0D48F829DA086B00B19CC2 /* LightSteeringViewModel */ = {
+		6D0D48F829DA086B00B19CC2 /* DeviceSteeringViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				6D0D48FC29DA0AB100B19CC2 /* LightSteeringViewModel.swift */,
+				6D0D490F29DB955700B19CC2 /* HeaterSteeringViewModel.swift */,
+				6D0D491129DB956700B19CC2 /* RollerShutterSteeringViewModel.swift */,
+				6D0D491329DB957600B19CC2 /* DeviceSteeringViewModel.swift */,
 			);
-			path = LightSteeringViewModel;
+			path = DeviceSteeringViewModel;
 			sourceTree = "<group>";
 		};
 		6D0D48F929DA087600B19CC2 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				6D0D48FA29DA0A9700B19CC2 /* LightSteeringPresenter.swift */,
-				6D0D490629DA0BFE00B19CC2 /* LightSteeringPresenterimplementation.swift */,
+				6D0D48FA29DA0A9700B19CC2 /* DeviceSteeringPresenter.swift */,
+				6D0D490629DA0BFE00B19CC2 /* DeviceSteeringPresenterImplementation.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -569,16 +466,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6D0D490529DA0B4800B19CC2 /* LightSteeringViewContract.swift in Sources */,
+				6D0D490529DA0B4800B19CC2 /* DeviceSteeringViewContract.swift in Sources */,
 				6D0D48A229D8D21A00B19CC2 /* ListDevicesPresenterImplementation.swift in Sources */,
 				6D0D48AB29D8F21F00B19CC2 /* UIImage+Extension.swift in Sources */,
 				6D0D48BF29D9101E00B19CC2 /* ListDevicesInteractor.swift in Sources */,
 				6D0D489E29D8D17E00B19CC2 /* ListDevicesPresenter.swift in Sources */,
+				6D0D491229DB956700B19CC2 /* RollerShutterSteeringViewModel.swift in Sources */,
+				6D0D491029DB955700B19CC2 /* HeaterSteeringViewModel.swift in Sources */,
 				6D0D489A29D8D16200B19CC2 /* ListDevicesViewModel.swift in Sources */,
 				6D0D489829D8D15900B19CC2 /* DeviceTableViewCell.swift in Sources */,
 				6D0D48E029D9C05100B19CC2 /* HeaterProduct.swift in Sources */,
 				6D0D488D29D8CD1500B19CC2 /* ListDevicesCoordinator.swift in Sources */,
-				6D0D490729DA0BFE00B19CC2 /* LightSteeringPresenterimplementation.swift in Sources */,
+				6D0D490729DA0BFE00B19CC2 /* DeviceSteeringPresenterImplementation.swift in Sources */,
 				6D0D48D829D9217D00B19CC2 /* ListDevicesJson.swift in Sources */,
 				6D0D48B229D8FFB400B19CC2 /* SmartHomeApp.xcdatamodeld in Sources */,
 				6D0D48C129D9102700B19CC2 /* ListDevicesInteractorImplementation.swift in Sources */,
@@ -595,16 +494,17 @@
 				6D0D48A029D8D20900B19CC2 /* ListDevicesViewContract.swift in Sources */,
 				6D0D48B429D9022000B19CC2 /* ListDevicesTableViewDataSource.swift in Sources */,
 				6D0D48C729D910F600B19CC2 /* ListDevicesRepositoryImplementation.swift in Sources */,
-				6D0D48FB29DA0A9700B19CC2 /* LightSteeringPresenter.swift in Sources */,
+				6D0D48FB29DA0A9700B19CC2 /* DeviceSteeringPresenter.swift in Sources */,
 				6D0D48E229D9C09D00B19CC2 /* RollerShutterProduct.swift in Sources */,
 				6D0D489629D8D14500B19CC2 /* ListDevicesViewController.swift in Sources */,
 				6D0D48A929D8EBF700B19CC2 /* DependencyProvider.swift in Sources */,
 				6D0D48B829D90C8600B19CC2 /* ListDevices.swift in Sources */,
-				6D0D490129DA0B0A00B19CC2 /* LightSteeringViewController.swift in Sources */,
+				6D0D490129DA0B0A00B19CC2 /* DeviceSteeringViewController.swift in Sources */,
 				6D0D490329DA0B1200B19CC2 /* LightSteeringView.swift in Sources */,
 				6D0D48E429D9C0C000B19CC2 /* LightProduct.swift in Sources */,
-				6D0D48FF29DA0AD100B19CC2 /* LightSteeringViewModelMapper.swift in Sources */,
+				6D0D48FF29DA0AD100B19CC2 /* DeviceSteeringViewModelMapper.swift in Sources */,
 				6D0D487529D8CBEF00B19CC2 /* SceneDelegate.swift in Sources */,
+				6D0D491429DB957600B19CC2 /* DeviceSteeringViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

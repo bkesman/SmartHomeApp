@@ -1,5 +1,5 @@
 //
-//  LightSteeringViewController.swift
+//  DeviceSteeringViewController.swift
 //  SmartHomeApp
 //
 //  Created by Berkan Kesman on 02/04/2023.
@@ -8,11 +8,11 @@
 import Foundation
 import UIKit
 
-class LightSteeringViewController: UIViewController,
-                                   LightSteeringViewContract,
-                                   LightSteeringViewDelegate {
+class DeviceSteeringViewController: UIViewController,
+                                    DeviceSteeringViewContract,
+                                    LightSteeringViewDelegate {
     
-    public var presenter: LightSteeringPresenter?
+    public var presenter: DeviceSteeringPresenter?
     private let lightSteeringView = LightSteeringView()
     
     override func viewDidLoad() {
@@ -21,13 +21,23 @@ class LightSteeringViewController: UIViewController,
         setUp()
     }
     
-    //MARK: LightSteeringViewContract
+    //MARK: DeviceSteeringViewContract
     
-    func display(with viewModel: LightSteeringViewModel) {
-        lightSteeringView.configure(with: viewModel)
+    func display(with viewModel: DeviceSteeringViewModel) {
+        switch viewModel {
+        case .lightSteeringViewModel(let lightSteeringViewModel):
+            lightSteeringView.isHidden = false
+            lightSteeringView.configure(with: lightSteeringViewModel)
+        case .rollerShutterSteeringViewModel(let rollerShutterSteeringViewModel):
+            lightSteeringView.isHidden = true
+            return
+        case .heaterSteeringViewModel(let heaterSteeringViewModel):
+            lightSteeringView.isHidden = true
+            return
+        }
     }
     
-    //MARK: LightSteeringViewDelegate
+    //MARK: DeviceSteeringViewDelegate
     
     func lightSteeringViewDelegate(didChangeIntensityValueForView: LightSteeringView,
                                    newValue: Int) {

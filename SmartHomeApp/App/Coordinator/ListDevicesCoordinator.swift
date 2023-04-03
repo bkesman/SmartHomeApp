@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 class ListDevicesCoordinator: ListDevicesPresenterDelegate,
-                              LightSteeringPresenterDelegate {
+                              DeviceSteeringPresenterDelegate {
     
     let rootViewController: UIViewController
     let navigationController = UINavigationController()
@@ -20,20 +20,12 @@ class ListDevicesCoordinator: ListDevicesPresenterDelegate,
     
     //MARK: ListDevicesPresenterDelegate
     
-    func didSelectRollerShutterProduct(_ product: RollerShutterProduct) {
-        
-    }
-    
-    func didSelectHeaterProduct(_ product: HeaterProduct) {
-        
-    }
-    
-    func didSelectLightProduct(_ product: LightProduct) {
-        let viewController = LightSteeringViewController()
-        viewController.presenter = DependencyProvider.shared.lightSteeringPresenter(viewContract: viewController,
-                                                                                    delegate: self,
-                                                                                    lightProduct: product,
-                                                                                    listDevicesInteractor: DependencyProvider.shared.listDevicesInteractor())
+    func didSelect(device: Device) {
+        let viewController = DeviceSteeringViewController()
+        viewController.presenter = DependencyProvider.shared.deviceSteeringPresenter(viewContract: viewController,
+                                                                                     delegate: self,
+                                                                                     device: device,
+                                                                                     listDevicesInteractor: DependencyProvider.shared.listDevicesInteractor())
         navigationController.pushViewController(viewController, animated: true)
     }
     
