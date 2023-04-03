@@ -25,5 +25,25 @@ class LightSteeringPresenterimplementation: LightSteeringPresenter {
     //MARK: LightSteeringPresenter
 
     func start() {
+        reload()
+    }
+    
+    func didChangeIntensityValue(newValue: Int) {
+        lightProduct.intensity = newValue
+        reload()
+    }
+    
+    func didChangePower(newValue: Bool) {
+        if newValue {
+            lightProduct.mode = .On
+        } else {
+            lightProduct.mode = .Off
+        }
+        reload()
+    }
+    
+    private func reload() {
+        let viewModel = mapper.map(product: lightProduct)
+        viewContract?.display(with: viewModel)
     }
 }

@@ -9,6 +9,8 @@ import Foundation
 
 protocol LightSteeringPresenter {
     func start()
+    func didChangeIntensityValue(newValue: Int)
+    func didChangePower(newValue: Bool)
 }
 
 protocol LightSteeringPresenterDelegate: AnyObject {
