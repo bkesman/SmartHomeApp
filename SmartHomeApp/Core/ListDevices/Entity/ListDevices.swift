@@ -10,6 +10,16 @@ import Foundation
 enum Mode {
     case On
     case Off
+    
+    func toString() -> String {
+        switch self {
+        case .On:
+            return "ON"
+        case .Off:
+            return "OFF"
+        }
+    }
+
 }
 
 struct ListDevices {
