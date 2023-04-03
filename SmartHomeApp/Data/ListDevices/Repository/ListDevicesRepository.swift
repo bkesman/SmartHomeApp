@@ -9,4 +9,5 @@ import Foundation
 
 protocol ListDevicesRepository {
     func getListDevices(completion: @escaping (Result<ListDevicesJson, Error>)-> Void)
+    func storeDevice(deviceJsonToStore: DeviceJson, completion: @escaping (Result<Void, Error>) -> Void)
 }

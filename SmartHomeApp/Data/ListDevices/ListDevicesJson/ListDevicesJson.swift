@@ -8,5 +8,5 @@
 import Foundation
 
 struct ListDevicesJson: Codable {
-    let devices: [DeviceJson]
+    var devices: [DeviceJson]
 }

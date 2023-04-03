@@ -40,6 +40,28 @@ class ListDevicesRepositoryImplementation: ListDevicesRepository {
             }
     }
     
+    func storeDevice(deviceJsonToStore: DeviceJson, completion: @escaping (Result<Void, Error>) -> Void) {
+        do {
+            let data = userDefaults.object(forKey: "ListDevices") as! Data
+            var listDevicesJson = try JSONDecoder().decode(ListDevicesJson.self, from: data)
+            for (indexDeviceJson,deviceJson) in listDevicesJson.devices.enumerated() {
+                if deviceJsonToStore.id == deviceJson.id {
+                    listDevicesJson.devices[indexDeviceJson] = deviceJsonToStore
+                        do {
+                            try self.storeJsonDataToDisk(listDevicesJson: listDevicesJson)
+                        } catch {
+                            completion(.failure(error))
+                            return
+                        }
+                        completion(.success(Void()))
+                        return
+                }
+            }
+        } catch {
+            completion(.failure(error))
+        }
+    }
+    
     private func readLocalFile(forName name: String, completion: @escaping (Result<Data, Error>) -> Void) {
         do {
             if let bundlePath = Bundle.main.path(forResource: name,
