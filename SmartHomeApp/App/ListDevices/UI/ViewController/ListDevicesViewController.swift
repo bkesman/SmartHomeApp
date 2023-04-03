@@ -22,6 +22,10 @@ class ListDevicesViewController: UIViewController,
         setUp()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        presenter?.start()
+    }
+    
     //MARK: ListDevicesViewContract
 
     func display(viewModels: ListDevicesViewModel) {

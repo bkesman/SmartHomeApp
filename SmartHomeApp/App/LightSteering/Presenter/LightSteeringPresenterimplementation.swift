@@ -33,6 +33,14 @@ class LightSteeringPresenterimplementation: LightSteeringPresenter {
     
     func didChangeIntensityValue(newValue: Int) {
         lightProduct.intensity = newValue
+        listDevicesInteractor.storeLightProduct(lightProduct: lightProduct) { result in
+            switch result {
+            case .success:
+                self.reload()
+            case .failure(let error):
+                print(error) //TODO: Handle error
+            }
+        }
         reload()
     }
     
@@ -41,6 +49,14 @@ class LightSteeringPresenterimplementation: LightSteeringPresenter {
             lightProduct.mode = .On
         } else {
             lightProduct.mode = .Off
+        }
+        listDevicesInteractor.storeLightProduct(lightProduct: lightProduct) { result in
+            switch result {
+            case .success:
+                self.reload()
+            case .failure(let error):
+                print(error) //TODO: Handle error
+            }
         }
         reload()
     }
