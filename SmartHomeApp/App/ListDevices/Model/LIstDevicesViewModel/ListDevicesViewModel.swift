@@ -19,22 +19,4 @@ struct DeviceViewModel {
     let currentState: String
     let currentStateIcon: UIImage?
     let isWorking: Bool
-    let productType: ProductType
-}
-
-enum ProductType {
-    case light
-    case rollerShutter
-    case heater
-    
-    func toString() -> String {
-        switch self {
-        case .light:
-            return "Light"
-        case .heater:
-            return "Heater"
-        case .rollerShutter:
-            return "RollerShutter"
-        }
-    }
 }

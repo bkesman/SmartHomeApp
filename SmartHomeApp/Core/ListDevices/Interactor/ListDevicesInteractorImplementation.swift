@@ -27,9 +27,9 @@ class ListDevicesInteractorImplementation: ListDevicesInteractor {
         }
     }
     
-    func storeLightProduct(lightProduct: LightProduct,
-                           completion: @escaping (Result<Void, Error>) -> Void) {
-        let deviceJson = LightProductMapper().map(lightProduct: lightProduct)
+    func storeDevice(device: Device,
+                     completion: @escaping (Result<Void, Error>) -> Void) {
+        let deviceJson = LightProductMapper().map(device: device)
         listDevicesRepository.storeDevice(deviceJsonToStore: deviceJson, completion: completion)
     }
 }

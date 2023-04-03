@@ -37,30 +37,13 @@ class ListDevicesPresenterImplementation: ListDevicesPresenter {
         }
     }
     
-    func didSelectDevice(with id: Int, productType: ProductType) {
-        switch productType {
-        case .rollerShutter:
-            guard let rollerShutterProduct = listDevices?.rollerShutters.first(where: { rollerShutterProduct in
-                return rollerShutterProduct.id == id
-            }) else {
-                return
-            }
-            delegate?.didSelectRollerShutterProduct(rollerShutterProduct)
-        case .heater:
-            guard let heaterProduct = listDevices?.heaters.first(where: { heaterProduct in
-                return heaterProduct.id == id
-            }) else {
-                return
-            }
-            delegate?.didSelectHeaterProduct(heaterProduct)
-        case .light:
-            guard let lightProduct = listDevices?.lights.first(where: { lightProduct in
-                return lightProduct.id == id
-            }) else {
-                return
-            }
-            delegate?.didSelectLightProduct(lightProduct)
+    func didSelectDevice(with id: Int) {
+        guard let device = listDevices?.devices.first(where: { device in
+            device.id == id
+        }) else {
+            return
         }
+        delegate?.didSelect(device: device)
     }
     
     private func reload(with listDevices: ListDevices) {

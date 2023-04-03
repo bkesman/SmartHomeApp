@@ -36,9 +36,8 @@ class ListDevicesViewController: UIViewController,
     
     func listDevicesTableViewDataSource(_ dataSource: ListDevicesTableViewDataSource,
                                         didSelectRowWithIndexPath indexPath: IndexPath,
-                                        with id: Int,
-                                        productType: ProductType) {
-        presenter?.didSelectDevice(with: id, productType: productType)
+                                        with id: Int) {
+        presenter?.didSelectDevice(with: id)
     }
     
     private func createTableView() -> UITableView {

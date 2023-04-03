@@ -9,6 +9,6 @@ import Foundation
 
 protocol ListDevicesInteractor {
     func getListDevices(completion: @escaping (Result<ListDevices, Error>)-> Void)
-    func storeLightProduct(lightProduct: LightProduct,
-                           completion: @escaping (Result<Void, Error>) -> Void)
+    func storeDevice(device: Device,
+                     completion: @escaping (Result<Void, Error>) -> Void)
 }

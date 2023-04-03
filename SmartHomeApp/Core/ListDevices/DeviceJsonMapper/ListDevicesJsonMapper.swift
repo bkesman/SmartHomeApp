@@ -10,24 +10,31 @@ import Foundation
 struct ListDevicesJsonMapper {
     
     func map(listDevicesJson: ListDevicesJson) ->  ListDevices {
-        var listDevices = ListDevices(heaters: [], rollerShutters: [], lights: [])
+        var listDevices = ListDevices(devices: [])
         for deviceJson in listDevicesJson.devices {
             switch deviceJson.productType {
-            case "Light":
+            case ProductType.light(LightProduct(intensity: 0, mode: .Off)).toString():
                 guard let lightProduct = mapLightProduct(deviceJson: deviceJson) else {
                     break
                 }
-                listDevices.lights.append(lightProduct)
-            case "RollerShutter":
+                listDevices.devices.append(Device(id: deviceJson.id,
+                                                  deviceName: deviceJson.deviceName,
+                                                  productType: .light(lightProduct)))
+                
+            case ProductType.rollerShutter(RollerShutterProduct(position: 0)).toString():
                 guard let rollerShutterProduct = mapRollerShutterProduct(deviceJson: deviceJson) else {
                     break
                 }
-                listDevices.rollerShutters.append(rollerShutterProduct)
-            case "Heater":
+                listDevices.devices.append(Device(id: deviceJson.id,
+                                                  deviceName: deviceJson.deviceName,
+                                                  productType:  .rollerShutter(rollerShutterProduct)))
+            case ProductType.heater(HeaterProduct(mode: .Off, temperature: 0)).toString():
                 guard let heaterProduct = mapHeaterProduct(deviceJson: deviceJson) else {
                     break
                 }
-                listDevices.heaters.append(heaterProduct)
+                listDevices.devices.append(Device(id: deviceJson.id,
+                                                  deviceName: deviceJson.deviceName,
+                                                  productType: .heater(heaterProduct)))
             default:
                 break
             }
@@ -41,9 +48,7 @@ struct ListDevicesJsonMapper {
               let intensity = deviceJson.intensity else {
             return nil
         }
-        return LightProduct(id: deviceJson.id,
-                            deviceName: deviceJson.deviceName,
-                            intensity: intensity,
+        return LightProduct(intensity: intensity,
                             mode: mode)
     }
     
@@ -51,7 +56,7 @@ struct ListDevicesJsonMapper {
         guard let position = deviceJson.position else {
             return nil
         }
-        return RollerShutterProduct(id: deviceJson.id, deviceName: deviceJson.deviceName, position: position)
+        return RollerShutterProduct(position: position)
     }
     
     private func mapHeaterProduct(deviceJson: DeviceJson) -> HeaterProduct? {
@@ -60,9 +65,9 @@ struct ListDevicesJsonMapper {
               let temperature = deviceJson.temperature else {
             return nil
         }
-        return HeaterProduct(id: deviceJson.id, deviceName: deviceJson.deviceName, mode: mode, temperature: temperature)
+        return HeaterProduct(mode: mode,
+                             temperature: temperature)
     }
-    
     
     private func mapMode(modeString: String) -> Mode? {
         switch modeString {
