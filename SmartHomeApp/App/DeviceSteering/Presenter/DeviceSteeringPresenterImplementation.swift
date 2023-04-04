@@ -44,9 +44,9 @@ class DeviceSteeringPresenterImplementation: DeviceSteeringPresenter {
                     print(error) //TODO: Handle error
                 }
             }
-        case .heater(var heaterProduct):
+        case .heater(_):
             return
-        case .rollerShutter(var rollerShutterProduct):
+        case .rollerShutter(_):
             return
         }
         reload()
@@ -69,9 +69,9 @@ class DeviceSteeringPresenterImplementation: DeviceSteeringPresenter {
                     print(error) //TODO: Handle error
                 }
             }
-        case .heater(let heaterProduct):
+        case .heater(_):
             return
-        case .rollerShutter(let rollerShutterProduct):
+        case .rollerShutter(_):
             return
         }
         reload()
