@@ -11,6 +11,7 @@ protocol DeviceSteeringPresenter {
     func start()
     func didChangeIntensityValue(newValue: Int)
     func didChangePower(newValue: Bool)
+    func didChangePositionValue(newValue: Int)
 }
 
 protocol DeviceSteeringPresenterDelegate: AnyObject {

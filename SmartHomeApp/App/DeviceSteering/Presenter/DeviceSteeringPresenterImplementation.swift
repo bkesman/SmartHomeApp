@@ -77,6 +77,28 @@ class DeviceSteeringPresenterImplementation: DeviceSteeringPresenter {
         reload()
     }
     
+    func didChangePositionValue(newValue: Int) {
+        switch device.productType {
+        case .light(_):
+            return
+        case .heater(_):
+            return
+        case .rollerShutter(var rollerShutterProduct):
+            rollerShutterProduct.position = newValue
+            device.productType = .rollerShutter(rollerShutterProduct)
+            listDevicesInteractor.storeDevice(device: device) { result in
+                switch result {
+                case .success:
+                    self.reload()
+                case .failure(let error):
+                    print(error) //TODO: Handle error
+                }
+            }
+        }
+        reload()
+    }
+
+    
     private func reload() {
         let viewModel = mapper.map(device: device)
         viewContract?.display(with: viewModel)

@@ -50,6 +50,7 @@
 		6D0D491029DB955700B19CC2 /* HeaterSteeringViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0D490F29DB955700B19CC2 /* HeaterSteeringViewModel.swift */; };
 		6D0D491229DB956700B19CC2 /* RollerShutterSteeringViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0D491129DB956700B19CC2 /* RollerShutterSteeringViewModel.swift */; };
 		6D0D491429DB957600B19CC2 /* DeviceSteeringViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0D491329DB957600B19CC2 /* DeviceSteeringViewModel.swift */; };
+		6D0D491629DB9B5900B19CC2 /* RollerShutterSteeringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0D491529DB9B5900B19CC2 /* RollerShutterSteeringView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,6 +99,7 @@
 		6D0D490F29DB955700B19CC2 /* HeaterSteeringViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaterSteeringViewModel.swift; sourceTree = "<group>"; };
 		6D0D491129DB956700B19CC2 /* RollerShutterSteeringViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollerShutterSteeringViewModel.swift; sourceTree = "<group>"; };
 		6D0D491329DB957600B19CC2 /* DeviceSteeringViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceSteeringViewModel.swift; sourceTree = "<group>"; };
+		6D0D491529DB9B5900B19CC2 /* RollerShutterSteeringView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollerShutterSteeringView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -353,6 +355,7 @@
 			isa = PBXGroup;
 			children = (
 				6D0D490229DA0B1200B19CC2 /* LightSteeringView.swift */,
+				6D0D491529DB9B5900B19CC2 /* RollerShutterSteeringView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -470,6 +473,7 @@
 				6D0D48A229D8D21A00B19CC2 /* ListDevicesPresenterImplementation.swift in Sources */,
 				6D0D48AB29D8F21F00B19CC2 /* UIImage+Extension.swift in Sources */,
 				6D0D48BF29D9101E00B19CC2 /* ListDevicesInteractor.swift in Sources */,
+				6D0D491629DB9B5900B19CC2 /* RollerShutterSteeringView.swift in Sources */,
 				6D0D489E29D8D17E00B19CC2 /* ListDevicesPresenter.swift in Sources */,
 				6D0D491229DB956700B19CC2 /* RollerShutterSteeringViewModel.swift in Sources */,
 				6D0D491029DB955700B19CC2 /* HeaterSteeringViewModel.swift in Sources */,
