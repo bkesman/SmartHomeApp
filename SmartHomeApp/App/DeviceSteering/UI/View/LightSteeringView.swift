@@ -84,7 +84,7 @@ class LightSteeringView: UIView {
         addSubview(powerSwitch)
         addSubview(powerLabel)
         NSLayoutConstraint.activate([
-            sliderTitleLabel.topAnchor.constraint(equalTo: topAnchor, constant: UIScreen.main.bounds.height * 0.5),
+            sliderTitleLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
             sliderTitleLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
             slider.topAnchor.constraint(equalTo: sliderTitleLabel.bottomAnchor, constant: 32),
             slider.centerXAnchor.constraint(equalTo: centerXAnchor, constant: -12),
