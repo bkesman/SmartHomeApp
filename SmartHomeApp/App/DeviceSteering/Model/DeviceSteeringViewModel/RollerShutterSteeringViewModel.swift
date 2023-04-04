@@ -9,5 +9,6 @@ import Foundation
 
 struct RollerShutterSteeringViewModel {
     let positionTitle: String
-    let position: Int
+    let positionValue: Int
+    let positionValueTitle: String
 }

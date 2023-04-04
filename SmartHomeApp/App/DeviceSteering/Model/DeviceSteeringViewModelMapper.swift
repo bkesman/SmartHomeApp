@@ -13,14 +13,16 @@ struct DeviceSteeringViewModelMapper {
         switch device.productType {
         case .light(let lightProduct):
             return .lightSteeringViewModel(LightSteeringViewModel(mode: lightProduct.mode,
-                                                                                          modeTitle: "Turn the device ON/OFF",
-                                                                                          intensityTitle: "Intensity",
-                                                                                          intensity: lightProduct.intensity))
+                                                                  modeTitle: "Turn the device ON/OFF",
+                                                                  intensityTitle: "Intensity",
+                                                                  intensityValue: lightProduct.intensity,
+                                                                  intensityValueTitle: "\(lightProduct.intensity)%"))
         case .heater(let heaterProduct):
             return .heaterSteeringViewModel(HeaterSteeringViewModel())
         case .rollerShutter(let rollerShutterProduct):
             return .rollerShutterSteeringViewModel(RollerShutterSteeringViewModel(positionTitle: "Position",
-                                                                                  position: rollerShutterProduct.position))
+                                                                                  positionValue: rollerShutterProduct.position,
+                                                                                  positionValueTitle: "\(rollerShutterProduct.position)%"))
         }
     }
 }
