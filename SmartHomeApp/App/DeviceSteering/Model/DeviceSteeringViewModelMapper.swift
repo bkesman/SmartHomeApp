@@ -11,7 +11,7 @@ struct DeviceSteeringViewModelMapper {
     
     func map(device: Device) -> DeviceSteeringViewModel {
         switch device.productType {
-        case .light(var lightProduct):
+        case .light(let lightProduct):
             return .lightSteeringViewModel(LightSteeringViewModel(mode: lightProduct.mode,
                                                                                           modeTitle: "Turn the device ON/OFF",
                                                                                           intensityTitle: "Intensity",
@@ -19,7 +19,8 @@ struct DeviceSteeringViewModelMapper {
         case .heater(let heaterProduct):
             return .heaterSteeringViewModel(HeaterSteeringViewModel())
         case .rollerShutter(let rollerShutterProduct):
-            return .rollerShutterSteeringViewModel(RollerShutterSteeringViewModel())
+            return .rollerShutterSteeringViewModel(RollerShutterSteeringViewModel(positionTitle: "Position",
+                                                                                  position: rollerShutterProduct.position))
         }
     }
 }
