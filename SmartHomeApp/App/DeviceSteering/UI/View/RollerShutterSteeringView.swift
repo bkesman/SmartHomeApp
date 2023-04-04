@@ -11,6 +11,8 @@ import UIKit
 protocol RollerShutterSteeringViewDelegate{
     func rollerShutterSteeringViewDelegate(didChangePositionValueForView: RollerShutterSteeringView,
                                            newValue: Int)
+    func rollerShutterSteeringViewDelegate(didRequestNewPositionValueForView: RollerShutterSteeringView,
+                                           newValue: Int)
 }
 
 class RollerShutterSteeringView: UIView {
@@ -41,8 +43,8 @@ class RollerShutterSteeringView: UIView {
     
     func configure(with viewModel: RollerShutterSteeringViewModel) {
         sliderTitleLabel.text = viewModel.positionTitle
-        slider.value = Float(viewModel.position)
-        sliderValueLabel.text = "\(viewModel.position)"
+        slider.value = Float(viewModel.positionValue)
+        sliderValueLabel.text =  viewModel.positionValueTitle
     }
     
     private func createSliderTitleLabel() -> UILabel {
@@ -95,11 +97,12 @@ class RollerShutterSteeringView: UIView {
     
     @objc private func onSliderValChanged(slider: UISlider, event: UIEvent) {
         if let touchEvent = event.allTouches?.first {
+            /* To avoid excessively frequent read/write operations to UserDefaults, we only update the user defaults when the user has finished interacting with the slider*/
             if touchEvent.phase == .moved {
-                sliderValueLabel.text = "\(Int(slider.value))"
+                delegate?.rollerShutterSteeringViewDelegate(didChangePositionValueForView: self, newValue: Int(slider.value))
             }
             else if touchEvent.phase == .ended {
-                delegate?.rollerShutterSteeringViewDelegate(didChangePositionValueForView: self, newValue: Int(slider.value))
+                delegate?.rollerShutterSteeringViewDelegate(didRequestNewPositionValueForView: self, newValue: Int(slider.value))
             }
         }
     }

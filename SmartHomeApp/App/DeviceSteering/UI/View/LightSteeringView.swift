@@ -11,6 +11,8 @@ import UIKit
 protocol LightSteeringViewDelegate{
     func lightSteeringViewDelegate(didChangeIntensityValueForView: LightSteeringView,
                                    newValue: Int)
+    func lightSteeringViewDelegate(didRequestNewIntensityValueForView: LightSteeringView,
+                                   newValue: Int)
     func lightSteeringViewDelegate(didChangePowerSwitchForView: LightSteeringView,
                                    newValue: Bool)
 }
@@ -38,8 +40,8 @@ class LightSteeringView: UIView {
     
     func configure(with viewModel: LightSteeringViewModel) {
         sliderTitleLabel.text = viewModel.intensityTitle
-        slider.value = Float(viewModel.intensity)
-        sliderValueLabel.text = "\(viewModel.intensity)"
+        slider.value = Float(viewModel.intensityValue)
+        sliderValueLabel.text = viewModel.intensityValueTitle
         powerSwitch.isOn = viewModel.mode == .On
         powerLabel.text = viewModel.modeTitle
         slider.isEnabled = powerSwitch.isOn
@@ -100,11 +102,12 @@ class LightSteeringView: UIView {
     
     @objc private func onSliderValChanged(slider: UISlider, event: UIEvent) {
         if let touchEvent = event.allTouches?.first {
+            /* To avoid excessively frequent read/write operations to UserDefaults, we only update the user defaults when the user has finished interacting with the slider*/
             if touchEvent.phase == .moved {
-                sliderValueLabel.text = "\(Int(slider.value))"
+                delegate?.lightSteeringViewDelegate(didChangeIntensityValueForView: self, newValue: Int(slider.value))
             }
             else if touchEvent.phase == .ended {
-                delegate?.lightSteeringViewDelegate(didChangeIntensityValueForView: self, newValue: Int(slider.value))
+                delegate?.lightSteeringViewDelegate(didRequestNewIntensityValueForView: self, newValue: Int(slider.value))
             }
         }
     }

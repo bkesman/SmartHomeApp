@@ -31,7 +31,7 @@ class DeviceSteeringPresenterImplementation: DeviceSteeringPresenter {
         reload()
     }
     
-    func didChangeIntensityValue(newValue: Int) {
+    func didRequestNewIntensityValue(newValue: Int) {
         switch device.productType {
         case .light(var lightProduct):
             lightProduct.intensity = newValue
@@ -44,6 +44,19 @@ class DeviceSteeringPresenterImplementation: DeviceSteeringPresenter {
                     print(error) //TODO: Handle error
                 }
             }
+        case .heater(_):
+            return
+        case .rollerShutter(_):
+            return
+        }
+        reload()
+    }
+    
+    func didChangeIntensityValue(newValue: Int) {
+        switch device.productType {
+        case .light(var lightProduct):
+            lightProduct.intensity = newValue
+            device.productType = .light(lightProduct)
         case .heater(_):
             return
         case .rollerShutter(_):
@@ -78,6 +91,19 @@ class DeviceSteeringPresenterImplementation: DeviceSteeringPresenter {
     }
     
     func didChangePositionValue(newValue: Int) {
+        switch device.productType {
+        case .light(_):
+            return
+        case .heater(_):
+            return
+        case .rollerShutter(var rollerShutterProduct):
+            rollerShutterProduct.position = newValue
+            device.productType = .rollerShutter(rollerShutterProduct)
+        }
+        reload()
+    }
+    
+    func didRequestNewPositionValue(newValue: Int) {
         switch device.productType {
         case .light(_):
             return

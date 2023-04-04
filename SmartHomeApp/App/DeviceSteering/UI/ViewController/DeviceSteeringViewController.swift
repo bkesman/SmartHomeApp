@@ -50,6 +50,12 @@ class DeviceSteeringViewController: UIViewController,
         presenter?.didChangeIntensityValue(newValue: newValue)
     }
     
+    func lightSteeringViewDelegate(didRequestNewIntensityValueForView: LightSteeringView,
+                                   newValue: Int) {
+        presenter?.didRequestNewIntensityValue(newValue: newValue)
+    }
+
+    
     func lightSteeringViewDelegate(didChangePowerSwitchForView: LightSteeringView,
                                    newValue: Bool) {
         presenter?.didChangePower(newValue: newValue)
@@ -61,6 +67,12 @@ class DeviceSteeringViewController: UIViewController,
                                            newValue: Int) {
         presenter?.didChangePositionValue(newValue: newValue)
     }
+    
+    func rollerShutterSteeringViewDelegate(didRequestNewPositionValueForView: RollerShutterSteeringView,
+                                           newValue: Int) {
+        presenter?.didRequestNewPositionValue(newValue: newValue)
+    }
+
 
     private func setUp() {
         lightSteeringView.delegate = self
