@@ -9,5 +9,5 @@ import Foundation
 
 struct HeaterProduct {
     let mode: Mode
-    let temperature: Int
+    var temperature: Int
 }

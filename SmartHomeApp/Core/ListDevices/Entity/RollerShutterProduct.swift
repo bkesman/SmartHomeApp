@@ -8,5 +8,5 @@
 import Foundation
 
 struct RollerShutterProduct {
-    let position: Int
+    var position: Int
 }
