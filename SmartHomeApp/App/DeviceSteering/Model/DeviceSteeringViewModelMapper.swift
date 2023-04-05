@@ -13,16 +13,17 @@ struct DeviceSteeringViewModelMapper {
         switch device.productType {
         case .light(let lightProduct):
             return .lightSteeringViewModel(LightSteeringViewModel(mode: lightProduct.mode,
-                                                                  modeTitle: "Turn the device ON/OFF",
-                                                                  intensityTitle: "Intensity",
+                                                                  modeTitle: NSLocalizedString("switch_mode_title", comment: ""),
+                                                                  intensityTitle: NSLocalizedString("intensity_title", comment: ""),
                                                                   intensityValue: lightProduct.intensity,
-                                                                  intensityValueTitle: "\(lightProduct.intensity)%"))
+                                                                  intensityValueTitle: String.localizedStringWithFormat(NSLocalizedString("intensity_value_title", comment: ""), lightProduct.intensity)))
         case .heater(let heaterProduct):
             return .heaterSteeringViewModel(HeaterSteeringViewModel())
         case .rollerShutter(let rollerShutterProduct):
-            return .rollerShutterSteeringViewModel(RollerShutterSteeringViewModel(positionTitle: "Position",
+            return .rollerShutterSteeringViewModel(RollerShutterSteeringViewModel(positionTitle: NSLocalizedString("position_title",
+                                                                                                                   comment: ""),
                                                                                   positionValue: rollerShutterProduct.position,
-                                                                                  positionValueTitle: "\(rollerShutterProduct.position)%"))
+                                                                                  positionValueTitle: String.localizedStringWithFormat(NSLocalizedString("position_value_title", comment: ""), rollerShutterProduct.position)))
         }
     }
 }

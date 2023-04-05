@@ -29,13 +29,13 @@ struct ListDevicesViewModelMapper {
         case .On:
             return DeviceViewModel(id: id,
                                    deviceName: deviceName,
-                                   currentState: "On at \(heaterProduct.temperature)°C",
+                                   currentState: String.localizedStringWithFormat(NSLocalizedString("heater_state_on", comment: ""), heaterProduct.temperature),
                                    currentStateIcon: .deviceHeaterOnIcon,
                                    isWorking: true)
         case .Off:
             return DeviceViewModel(id: id,
                                    deviceName: deviceName,
-                                   currentState: "Off",
+                                   currentState: NSLocalizedString("heater_state_off", comment: ""),
                                    currentStateIcon: .deviceHeaterOffIcon,
                                    isWorking: false)
         }
@@ -46,13 +46,13 @@ struct ListDevicesViewModelMapper {
         case .On:
             return DeviceViewModel(id: id,
                                    deviceName: deviceName,
-                                   currentState: "ON",
+                                   currentState: NSLocalizedString("light_state_on", comment: ""),
                                    currentStateIcon: .deviceLightOnIcon,
                                    isWorking: true)
         case .Off:
             return DeviceViewModel(id: id,
                                    deviceName: deviceName,
-                                   currentState: "OFF",
+                                   currentState: NSLocalizedString("light_state_off", comment: ""),
                                    currentStateIcon: .deviceLightOffIcon,
                                    isWorking: false)
         }
@@ -63,19 +63,19 @@ struct ListDevicesViewModelMapper {
         case 0:
             return DeviceViewModel(id: id,
                                    deviceName: deviceName,
-                                   currentState: "Closed",
+                                   currentState: NSLocalizedString("roller_shutter_state_closed", comment: ""),
                                    currentStateIcon: .deviceRollerShutterIcon,
                                    isWorking: false)
         case 1...99:
             return DeviceViewModel(id: id,
                                    deviceName: deviceName,
-                                   currentState: "Opened at \(rollerShutterProduct.position)%",
+                                   currentState: String.localizedStringWithFormat(NSLocalizedString("roller_shutter_state_partially_opened", comment: ""), rollerShutterProduct.position),
                                    currentStateIcon: .deviceRollerShutterIcon,
                                    isWorking: true)
         case 100:
             return DeviceViewModel(id: id,
                                    deviceName: deviceName,
-                                   currentState: "Opened",
+                                   currentState: NSLocalizedString("roller_shutter_state_opened", comment: ""),
                                    currentStateIcon: .deviceRollerShutterIcon,
                                    isWorking: true)
         default: return nil

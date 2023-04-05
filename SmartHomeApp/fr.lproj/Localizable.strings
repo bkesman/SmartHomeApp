@@ -1,0 +1,20 @@
+/* 
+  Localizable.strings
+  SmartHomeApp
+
+  Created by Berkan Kesman on 05/04/2023.
+  
+*/
+
+"switch_mode_title" = "Allumer ou éteindre l'appareil";
+"intensity_title" = "Intensité";
+"intensity_value_title" = "%d%%";
+"position_title" = "Position";
+"position_value_title" = "%d%%";
+"light_state_off" = "Éteint";
+"light_state_on" = "Allumé";
+"roller_shutter_state_closed" = "Fermé";
+"roller_shutter_state_partially_opened" = "Ouvert à %d%%";
+"roller_shutter_state_opened" = "Ouvert";
+"heater_state_off" = "Éteint";
+"heater_state_on" = "Allumé à %d°C";

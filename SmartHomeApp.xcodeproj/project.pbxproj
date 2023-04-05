@@ -51,6 +51,7 @@
 		6D0D491229DB956700B19CC2 /* RollerShutterSteeringViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0D491129DB956700B19CC2 /* RollerShutterSteeringViewModel.swift */; };
 		6D0D491429DB957600B19CC2 /* DeviceSteeringViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0D491329DB957600B19CC2 /* DeviceSteeringViewModel.swift */; };
 		6D0D491629DB9B5900B19CC2 /* RollerShutterSteeringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0D491529DB9B5900B19CC2 /* RollerShutterSteeringView.swift */; };
+		6D0D491929DCE71500B19CC2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6D0D491B29DCE71500B19CC2 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,6 +101,8 @@
 		6D0D491129DB956700B19CC2 /* RollerShutterSteeringViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollerShutterSteeringViewModel.swift; sourceTree = "<group>"; };
 		6D0D491329DB957600B19CC2 /* DeviceSteeringViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceSteeringViewModel.swift; sourceTree = "<group>"; };
 		6D0D491529DB9B5900B19CC2 /* RollerShutterSteeringView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollerShutterSteeringView.swift; sourceTree = "<group>"; };
+		6D0D491A29DCE71500B19CC2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		6D0D491C29DCE76200B19CC2 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +147,7 @@
 				6D0D487D29D8CBF100B19CC2 /* LaunchScreen.storyboard */,
 				6D0D488029D8CBF100B19CC2 /* Info.plist */,
 				6D0D48AA29D8F21F00B19CC2 /* UIImage+Extension.swift */,
+				6D0D491B29DCE71500B19CC2 /* Localizable.strings */,
 			);
 			path = SmartHomeApp;
 			sourceTree = "<group>";
@@ -439,6 +443,7 @@
 			knownRegions = (
 				en,
 				Base,
+				fr,
 			);
 			mainGroup = 6D0D486629D8CBEF00B19CC2;
 			productRefGroup = 6D0D487029D8CBEF00B19CC2 /* Products */;
@@ -455,6 +460,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D0D491929DCE71500B19CC2 /* Localizable.strings in Resources */,
 				6D0D487F29D8CBF100B19CC2 /* LaunchScreen.storyboard in Resources */,
 				6D0D48D629D920C900B19CC2 /* ListDevicesJson.json in Resources */,
 				6D0D48AF29D8F40800B19CC2 /* Image.xcassets in Resources */,
@@ -523,6 +529,15 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		6D0D491B29DCE71500B19CC2 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6D0D491A29DCE71500B19CC2 /* en */,
+				6D0D491C29DCE76200B19CC2 /* fr */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -530,6 +545,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -590,6 +606,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
